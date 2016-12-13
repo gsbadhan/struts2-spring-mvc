@@ -5,9 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>xmlui</title>
+<title>Insert title here</title>
 </head>
 <body>
-<s:action name="showloginpage" namespace="/" executeResult="true"></s:action>
+	<s:form method="post" action="validate">
+		<s:submit value="SignIn" align="left"/>
+	</s:form>
 </body>
 </html>

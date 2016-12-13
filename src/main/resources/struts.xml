@@ -7,12 +7,12 @@
 
 	<package name="default" namespace="/" extends="struts-default">
 
-		<action name="showxml" class="com.xmlui.actions.XmlViewer" method="showXML">
-			<result name="SUCCESS">viewxml.jsp</result>
+		<action name="showloginpage" class="userLogin" method="showLoginPage">
+			<result name="SUCCESS">login.jsp</result>
 		</action>
 		
-		<action name="savexml" class="com.xmlui.actions.XmlViewer" method="saveXML">
-			<result name="SUCCESS">pages/viewxml.jsp</result>
+		<action name="validate" class="userLogin" method="validate">
+			<result name="SUCCESS">pages/user.jsp</result>
 		</action>
 		
 		
