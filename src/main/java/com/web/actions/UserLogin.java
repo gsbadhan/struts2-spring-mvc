@@ -2,25 +2,30 @@ package com.web.actions;
 
 import javax.inject.Inject;
 
+import org.springframework.stereotype.Service;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.web.model.User;
 
+@Service
 public class UserLogin extends ActionSupport implements ModelDriven<User> {
 	private static final String SUCCESS = "SUCCESS";
 
 	private User user;
 
-	public UserLogin() {
-		System.out.println("hh");
+	@Inject
+	public UserLogin(User user) {
+		this.user = user;
 	}
 
 	public String showLoginPage() {
 		return SUCCESS;
 	}
 
-	public String saveXML() {
+	public String validateUser() {
+		System.out.println("user object:" + user);
+		
 		return SUCCESS;
 	}
 
@@ -28,5 +33,7 @@ public class UserLogin extends ActionSupport implements ModelDriven<User> {
 	public User getModel() {
 		return user;
 	}
+	
+	
 
 }

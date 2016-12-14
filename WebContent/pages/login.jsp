@@ -9,11 +9,10 @@
 </head>
 <body>
 	<s:form method="post" action="validate">
+		<s:textfield key="user.name.key" name="name" />
+		<s:textfield key="user.pswd.key" name="password" />
 		
-		<s:textfield label="user name" name="name" />
-		<s:textfield label="password" name="pswd" />
-		
-		<s:submit value="SignIn" align="center" />
+		<s:submit key="user.signin" align="center" />
 	</s:form>
 </body>
 </html>

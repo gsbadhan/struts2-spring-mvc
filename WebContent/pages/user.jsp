@@ -8,8 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<s:form method="post" action="validate">
-		<s:submit value="SignIn" align="left"/>
-	</s:form>
+	<table>
+		<tr>
+			<td><s:property value="name" />
+		</tr>
+	</table>
 </body>
 </html>

@@ -9,6 +9,7 @@
 	<properties>
 		<spring.version>4.2.4.RELEASE</spring.version>
 		<struts2.version>2.3.1.2</struts2.version>
+		<strust2.spring.plugin.version>2.3.1.2</strust2.spring.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -23,6 +24,13 @@
 			<artifactId>struts2-core</artifactId>
 			<version>${struts2.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>${strust2.spring.plugin.version}</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>javax.inject</groupId>

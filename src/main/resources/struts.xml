@@ -4,18 +4,24 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+	<constant name="struts.custom.i18n.resources" value="app-resources" />
 
 	<package name="default" namespace="/" extends="struts-default">
 
+		<interceptors>
+			<interceptor name="loggingICP" class="incomingOutgoingLogging" />
+		</interceptors>
+
 		<action name="showloginpage" class="userLogin" method="showLoginPage">
+			<interceptor-ref name="loggingICP" />
 			<result name="SUCCESS">login.jsp</result>
 		</action>
-		
-		<action name="validate" class="userLogin" method="validate">
+
+		<action name="validate" class="userLogin" method="validateUser">
 			<result name="SUCCESS">pages/user.jsp</result>
 		</action>
-		
-		
+
+
 	</package>
 
 </struts>
